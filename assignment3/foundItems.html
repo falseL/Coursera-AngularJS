@@ -1,0 +1,9 @@
+<div class="list">
+    <ol class="list-group list-group-flush">
+        <li ng-repeat="item in foundItems.items" class="list-group-item">
+            {{ item.name }}({{item.short_name}}): {{ item.name }}
+            <button class="pull-right" ng-click="foundItems.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ol>
+</div>
+<div class="error" ng-if="foundItems.emptyList()">Nothing found</div>
